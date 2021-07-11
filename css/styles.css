@@ -10,7 +10,7 @@ body{
 background-color: hsl(0, 0%, 100%);
 
 margin: 20% auto;
-border-radius: 10px;
+border-radius: 20px;
 padding: 20px 20px;
 max-width: 750px;
 
@@ -87,9 +87,12 @@ text-align: right;
 
 .lcol{
 
-text-align: center;
-  border-radius: 5px;
-  padding: 20px 0px;
+
+  border-radius: 20px;
+
+  padding-left: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
 }
 
@@ -130,12 +133,51 @@ text-align: center;
 
 
 .rcol{
-
+margin: 5px auto;
   background-color: hsl(183, 100%, 15%);
-
+max-width: 350px;
   border-radius: 10px;
+  padding-right: 10px;
+
 }
 
-.sbtn{
-  margin: 2px;
+.result-label{
+  padding-top:50px;
+  padding-left: 15px;
+  color: hsl(189, 41%, 97%);
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.result-sub-label{
+  padding-left: 15px;
+  color: hsl(184, 14%, 56%);
+  font-weight: 700;
+  font-size: 11px;
+}
+
+.result-text{
+  padding-top:40px;
+  color: hsl(172, 67%, 45%);
+  font-weight: 700;
+  font-size: 36px;
+}
+
+.btn-row{
+  text-align: center;
+}
+
+.btn-light-cyan {
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(185, 41%, 84%);
+    border-color: hsl(185, 41%, 84%);
+    margin-top: 80px;
+
+
+    width: 280px;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 0;
+    height: 38px;
+
 }
