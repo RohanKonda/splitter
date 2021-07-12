@@ -5,14 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
   <title>Splitter</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="index.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css">
+
+
 </head>
 
 <body>
@@ -32,7 +36,7 @@
       <div class="row fluid srow">
         <div class="col-lg-6 col-sm-12 lcol">
           <h6 class="bill-heading">Bill</h6>
-          <input type="number" class="amount-input" id="" placeholder="0" name="bill">
+          <input type="number" class="amount-input" id="bill-amount" placeholder="0" name="bill">
 
 
           <h6 class="bill-heading tip-heading">Select Tip %</h6>
@@ -40,16 +44,16 @@
           <div class="row tips-row">
 
             <div class="col-lg-4 col-sm-6 col-padding-r">
-              <button type="button" class="btn btn-light">5%</button>
-              <button type="button" class="btn btn-light">25%</button>
+              <button type="button" class="btn btn-light" id="five-percent">5%</button>
+              <button type="button" class="btn btn-light" id="twentyfive-percent">25%</button>
             </div>
             <div class="col-lg-4 col-sm-6 col-padding-r">
-              <button type="button" class="btn btn-light">10%</button>
-              <button type="button" class="btn btn-light">50%</button>
+              <button type="button" class="btn btn-light" id="ten-percent">10%</button>
+              <button type="button" class="btn btn-light" id="fifty-percent">50%</button>
             </div>
             <div class="col-lg-4 col-sm-6 col-padding-r">
-              <button type="button" class="btn btn-light">15%</button>
-                  <input type="number" class="btn custom-input" placeholder="Custom" ></input>
+              <button type="button" class="btn btn-light" id="fifteen-percent">15%</button>
+                  <input type="number" class="btn custom-input" placeholder="Custom" id="custom-percent"></input>
 
             </div>
 
@@ -61,12 +65,12 @@
               <h6 class="bill-heading tip-heading">Number of People</h6>
             </div>
             <div class="col-lg-6 col-sm-6 col-width">
-              <h6 class="bill-heading validation-msg">Can't be zero</h6>
+              <h6 class="bill-heading validation-msg" id="validation-msg">Can't be zero</h6>
             </div>
 
           </div>
 
-          <input type="number" class="amount-input person" id="" placeholder="0" name="person">
+          <input type="number" class="amount-input person" id="people-count" placeholder="0" name="person">
 
 
         </div>
@@ -80,7 +84,7 @@
             </div>
 
             <div class="col-lg-6 col-sm-6 col-width">
-              <h6 class="result-text">$0.00</h6>
+              <h6 class="result-text" id="tip-amount">$0.00</h6>
             </div>
 
 
@@ -95,7 +99,7 @@
             </div>
 
             <div class="col-lg-6 col-sm-6 col-width">
-              <h6 class="result-text">$0.00</h6>
+              <h6 class="result-text" id="total-amount">$0.00</h6>
             </div>
 
 
@@ -104,7 +108,7 @@
 
           <div class="row btn-row">
 <div class="ol-lg-12 col-sm-12">
-    <button type="button" class="btn btn-light-cyan" disabled>RESET</button>
+    <button type="button" class="btn btn-light-cyan" id="resetBtn" disabled>RESET</button>
 </div>
 
 
