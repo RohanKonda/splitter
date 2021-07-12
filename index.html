@@ -23,71 +23,63 @@
 
     <div class="container">
 
+<div class="title">
+  <h5>SPLI</h5>
+    <h5>TTER</h5>
+</div>
+
+
       <div class="row fluid srow">
         <div class="col-lg-6 col-sm-12 lcol">
           <h6 class="bill-heading">Bill</h6>
-          <div class="amount-div">
-            <!-- <label for="bill">Bill</label> -->
-            <span><img class="dollar" src="images/icon-dollar.svg" alt="dollor"></span>
-            <span><input type="" class="amount-input" id="" placeholder="0" name="bill"></span>
+          <input type="number" class="amount-input" id="" placeholder="0" name="bill">
 
-
-          </div>
 
           <h6 class="bill-heading tip-heading">Select Tip %</h6>
 
           <div class="row tips-row">
 
-            <div class="col-lg-4 col-sm-6">
+            <div class="col-lg-4 col-sm-6 col-padding-r">
               <button type="button" class="btn btn-light">5%</button>
               <button type="button" class="btn btn-light">25%</button>
             </div>
-            <div class="col-lg-4 col-sm-6">
+            <div class="col-lg-4 col-sm-6 col-padding-r">
               <button type="button" class="btn btn-light">10%</button>
               <button type="button" class="btn btn-light">50%</button>
             </div>
-            <div class="col-lg-4 col-sm-6">
+            <div class="col-lg-4 col-sm-6 col-padding-r">
               <button type="button" class="btn btn-light">15%</button>
-              <div class="amount-div custom-tip">
+                  <input type="number" class="btn custom-input" placeholder="Custom" ></input>
 
-
-                <input type="" class="amount-input custom-input" id="" placeholder="0" name="custom-tip">
-
-
-              </div>
             </div>
 
           </div>
 
           <div class="row person-row">
 
-            <div class="col-lg-6 col-sm-12">
+            <div class="col-lg-6 col-sm-6 col-width">
               <h6 class="bill-heading tip-heading">Number of People</h6>
             </div>
-            <div class="col-lg-6 col-sm-12">
-              <h6 class="bill-heading validation-msg">Can't be Zero</h6>
+            <div class="col-lg-6 col-sm-6 col-width">
+              <h6 class="bill-heading validation-msg">Can't be zero</h6>
             </div>
 
           </div>
-          <div class="amount-div">
-            <!-- <label for="bill">Bill</label> -->
-            <span><img class="dollar" src="images/icon-person.svg" alt="person"></span>
-            <span><input type="" class="amount-input" id="" placeholder="0" name="bill"></span>
 
+          <input type="number" class="amount-input person" id="" placeholder="0" name="person">
 
-          </div>
 
         </div>
         <div class="col-lg-6 col-sm-12 rcol">
 
           <div class="row">
 
-            <div class="col-lg-6 col-sm-6">
+            <div class="col-lg-6 col-sm-6 col-width">
               <h6 class="result-label">Tip Amount</h6>
               <h6 class="result-sub-label">/ person</h6>
             </div>
 
-            <div class="col-lg-6 col-sm-6">
+            <div class="col-lg-6 col-sm-6 col-width">
               <h6 class="result-text">$0.00</h6>
             </div>
 
@@ -97,12 +89,12 @@
 
           <div class="row">
 
-            <div class="col-lg-6 col-sm-6">
+            <div class="col-lg-6 col-sm-6 col-width">
               <h6 class="result-label">Total</h6>
               <h6 class="result-sub-label">/ person</h6>
             </div>
 
-            <div class="col-lg-6 col-sm-6">
+            <div class="col-lg-6 col-sm-6 col-width">
               <h6 class="result-text">$0.00</h6>
             </div>
 
@@ -112,7 +104,7 @@
 
           <div class="row btn-row">
 <div class="ol-lg-12 col-sm-12">
-    <button type="button" class="btn btn-light-cyan">RESET</button>
+    <button type="button" class="btn btn-light-cyan" disabled>RESET</button>
 </div>
 
 
